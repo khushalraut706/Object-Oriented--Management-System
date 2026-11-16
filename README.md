@@ -1,2 +1,2 @@
-# Object-Oriented---Management-System
+# Object-Oriented-Management-System
 Management System 🎥🚅
