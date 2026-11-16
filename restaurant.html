@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant Billing System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="navbar">
+  <div class="brand"><span class="stamp">JP</span> Java Projects, Reimagined</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="bank.html">ATM Banking</a>
+    <a href="shopping.html">Shopping Discount</a>
+    <a href="railway.html">Railway Fare</a>
+    <a href="restaurant.html" class="active">Restaurant Bill</a>
+  </nav>
+</div>
+
+<div class="hero">
+  <div class="eyebrow">Counter 04</div>
+  <h1>Restaurant Billing System</h1>
+  <p>Set the quantity for each dish. A 10% discount applies automatically once your subtotal passes ₹1,000, then 5% GST is added.</p>
+</div>
+
+<div class="ledger">
+  <div class="ledger-inner">
+
+    <div class="panel" style="max-width:560px;">
+      <h2>🍕 Order Menu</h2>
+      <div class="sub">Leave quantity at 0 to skip an item</div>
+
+      <div id="menuList">
+        <div class="menu-item">
+          <span class="name">Margherita Pizza</span>
+          <span class="price">₹250</span>
+          <input type="number" min="0" value="0" data-price="250" class="qty-input">
+        </div>
+        <div class="menu-item">
+          <span class="name">Cheese Burger</span>
+          <span class="price">₹150</span>
+          <input type="number" min="0" value="0" data-price="150" class="qty-input">
+        </div>
+        <div class="menu-item">
+          <span class="name">White Sauce Pasta</span>
+          <span class="price">₹200</span>
+          <input type="number" min="0" value="0" data-price="200" class="qty-input">
+        </div>
+        <div class="menu-item">
+          <span class="name">Club Sandwich</span>
+          <span class="price">₹120</span>
+          <input type="number" min="0" value="0" data-price="120" class="qty-input">
+        </div>
+        <div class="menu-item">
+          <span class="name">Cold Drink</span>
+          <span class="price">₹60</span>
+          <input type="number" min="0" value="0" data-price="60" class="qty-input">
+        </div>
+        <div class="menu-item">
+          <span class="name">Ice Cream Sundae</span>
+          <span class="price">₹90</span>
+          <input type="number" min="0" value="0" data-price="90" class="qty-input">
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:20px;">
+        <button class="btn" onclick="calculateRestaurantBill()">Generate Bill</button>
+        <button class="btn secondary" onclick="resetMenu()">Reset</button>
+      </div>
+
+      <div class="receipt" id="billReceipt"></div>
+    </div>
+
+    <div class="back-home-wrap">
+      <a href="index.html" class="back-home">← Back to Home</a>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="brass-line"></div>
+  Java Projects Website · Pure HTML, CSS &amp; JavaScript · No backend, no login
+</footer>
+
+<script src="js/restaurant.js"></script>
+</body>
+</html>
